@@ -39,10 +39,22 @@ function App() {
             <table id='xtable' >
                 <tr><th>Book title</th><th>Author</th><th>Genre</th><th>status</th></tr>
                 <tr>
-                    <td></td>
-                    <td></td>
-                    <td ></td>
-                    <td></td>
+                    <td>how to write commit messages</td>
+                    <td>nisura</td>
+                    <td >sci-fi</td>
+                    <td>available</td>
+                </tr>
+                <tr>
+                    <td>how to eat water</td>
+                    <td>ravindu</td>
+                    <td >sci-fi</td>
+                    <td>available</td>
+                </tr>
+                <tr>
+                    <td>how to row</td>
+                    <td>sahan</td>
+                    <td >fiction</td>
+                    <td>available</td>
                 </tr>
             </table>
             {
