@@ -12,7 +12,7 @@ import BooksView from './pages/bookview'
 const App = () => {
     return <div>
         <h1 style={{paddingLeft:"40px"}}>Library Management</h1>
-        <Nav username=/>
+        <Nav/>
         <BrowserRouter>
             <Routes>
                 <Route path="/" element=<Landing /> /> 
