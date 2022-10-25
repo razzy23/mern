@@ -57,7 +57,7 @@ function App() {
                     onChange={(e) => setStatus(e.target.value)}
                     type="text" placeholder="Status" /><br />
 
-                <input type="submit" value="Submit" />
+                <input style={{margin:'10px',padding:'10px'}} type="submit" value="Submit" />
             </form>
         </div>
     );

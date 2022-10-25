@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from 'react'
 import { BrowserRouter, Route, Routes, Link } from 'react-router-dom'
 import Login from './pages/login'
 import Register from './pages/register'
@@ -11,7 +12,7 @@ import BooksView from './pages/bookview'
 const App = () => {
     return <div>
         <h1 style={{paddingLeft:"40px"}}>Library Management</h1>
-        <Nav />
+        <Nav username=/>
         <BrowserRouter>
             <Routes>
                 <Route path="/" element=<Landing /> /> 

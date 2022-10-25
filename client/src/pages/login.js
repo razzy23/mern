@@ -4,7 +4,6 @@ import { useState } from 'react'
 function App() {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
-    const [count, setCount] = useState('out');
     async function loginUser(event) {
         event.preventDefault()
         const response = await fetch('http://localhost:1337/api/login', {
@@ -22,7 +21,6 @@ function App() {
         if(data.user){
             localStorage.setItem('token', data.user)
             alert("Login Successful")
-            setCount('in')
             window.location.href = "/dash"
         }else{
             alert("Login Failed")
