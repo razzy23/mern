@@ -17,11 +17,14 @@ function Nav() {
                 
             }}>
                 <li style={liStyle}>
-                    <a href="/">Home</a>
+                    <a id='home' href="/">Home</a>
                 
                 </li>
                 <li style={liStyle}>
-                    <a href="/login">Login</a>
+                    <a id='log' href="/login">Login</a>
+                </li>
+                <li style={liStyle}>
+                    <a id='reg' href="/register">Register</a>
                 </li>
                 <li style={liStyle}>
                     <a href="/bookView">Books View</a>

@@ -42,7 +42,9 @@ const Dashbord = () => {
                 populateQuote()
                 alert("Logged in")
                 history('/dash')
-
+                document.getElementById('log').style.display = 'none'
+                document.getElementById('reg').style.display = 'none'
+                document.getElementById('home').innerHTML = 'Log out'
             }
 
         }
