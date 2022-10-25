@@ -33,17 +33,17 @@ function App() {
     }}>
       <h1 style={{ fontFamily: "Arial" }}>Register</h1>
       <form onSubmit={registerUser}>
-        <input value={name}
+        <input style={{borderRadius:'10px', border:'0.5px solid', margin:'10px', padding:'10px', width:'20vw'}} value={name}
           onChange={(e) => setName(e.target.value)}
           type="text" placeholder="First Name" /><br />
-        <input value={email}
+        <input style={{borderRadius:'10px', border:'0.5px solid', margin:'10px', padding:'10px', width:'20vw'}} value={email}
           onChange={(e) => setEmail(e.target.value)}
           type="email" placeholder="Email" /><br />
-        <input value={password}
+        <input style={{borderRadius:'10px', border:'0.5px solid', margin:'10px', padding:'10px', width:'20vw'}} value={password}
           onChange={(e) => setPassword(e.target.value)}
           type="password" placeholder="Password" />
         <br />
-        <input type="submit" value="Register" />
+        <input style={{margin:'10px',padding:'10px'}} type="submit" value="Register" />
       </form>
     </div>
   );
