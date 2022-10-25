@@ -7,9 +7,10 @@ function App() {
 
     return ( 
         <div style={{
-            height: '50vh', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column',backgroundColor:'#abcdef',fontSize:"30px"
+             height: '50vh', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column'
           }}>
-            <h2>Welcome to the online library portal</h2>
+            <h2>Welcome to your local library</h2>
+            <h3>Please Login or Register to continue</h3>
         </div>
     );
 }

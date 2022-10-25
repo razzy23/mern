@@ -8,23 +8,27 @@ const liStyle ={
 
 function Nav() {
     return (
-        <nav>
+        <nav style={{
+           color:'white !important', backgroundColor:"grey", width:'500px', borderRadius:'10px', margin:'auto'
+        }}>
             <ul style={{
+                padding:0,
+                textAlign: 'center',
                 listStyleType: 'none',
                 display: 'flex',
-                justifyContent: 'start',
+                justifyContent: 'space-around',
                 flexDirection: 'row',
                 
             }}>
                 <li style={liStyle}>
-                    <a id='home' href="/">Home</a>
+                    <a href="/">Home</a>
                 
                 </li>
                 <li style={liStyle}>
-                    <a id='log' href="/login">Login</a>
+                    <a href="/login">Login</a>
                 </li>
                 <li style={liStyle}>
-                    <a id='reg' href="/register">Register</a>
+                    <a href="/register">Register</a>
                 </li>
                 <li style={liStyle}>
                     <a href="/bookView">Books View</a>
