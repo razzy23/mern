@@ -5,11 +5,12 @@ import Register from './pages/register'
 import Landing from './pages/landing'
 import Nav from './pages/nav'
 import Dash from './pages/dash'
-
+import BooksInsert from './pages/booksInsert'
+import BooksView from './pages/bookview'
 
 const App = () => {
     return <div>
-        <h1 style={{paddingLeft:"40px"}}>Library Management Pro Max</h1>
+        <h1 style={{paddingLeft:"40px"}}>Library Management</h1>
         <Nav />
         <BrowserRouter>
             <Routes>
@@ -17,6 +18,8 @@ const App = () => {
                 <Route path="/login" element=<Login /> />
                 <Route path="/register" element=<Register /> />
                 <Route path="/dash" element=<Dash /> />
+                <Route path="/booksInsert" element=<BooksInsert /> />
+                <Route path="/bookview" element=<BooksView /> />
             </Routes>
         </BrowserRouter>
     </div>

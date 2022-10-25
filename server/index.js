@@ -14,6 +14,15 @@ mongoose.connect('mongodb+srv://nisura:nisura2123@cluster0.n2fpl6p.mongodb.net/?
   console.log("MongoDB Server listening");
 });
 
+const usersRouter = require('./routes/user');  //imports the users router
+const booksRouter = require('./routes/books');  //imports the books router
+const issuesRouter = require('./routes/issues');  //imports the issues router
+
+app.use('/users', usersRouter); 
+app.use('/books', booksRouter);
+app.use('/issues', issuesRouter);
+
+
 
 app.post('/api/register', async (req, res) => {
   console.log(req.body)

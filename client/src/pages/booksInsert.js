@@ -38,22 +38,22 @@ function App() {
         }}>
             <h1>Books Insert</h1>
             <form onSubmit={bookinsert}>
-                <input value={bookname}
+                <input style={{borderRadius:'10px', border:'0.5px solid', margin:'10px', padding:'10px', width:'20vw'}} value={bookname}
                     onChange={(e) => setbookname(e.target.value)}
                     type="text" placeholder="Book Name" /><br />
-                <input value={ISBN}
+                <input  style={{borderRadius:'10px', border:'0.5px solid',margin:'10px', padding:'10px', width:'20vw'}} value={ISBN}
                     onChange={(e) => setISBN(e.target.value)}
                     type="text" placeholder="ISBN" /><br />
-                <input value={title}
+                <input  style={{borderRadius:'10px', border:'0.5px solid',margin:'10px', padding:'10px', width:'20vw'}} value={title}
                     onChange={(e) => setTitle(e.target.value)}
                     type="text" placeholder="Title" /><br />
-                <input value={author}
+                <input  style={{borderRadius:'10px', border:'0.5px solid',margin:'10px', padding:'10px', width:'20vw'}} value={author}
                     onChange={(e) => setAuthor(e.target.value)}
                     type="text" placeholder="Author" /><br />
-                <input value={publisher}
+                <input  style={{borderRadius:'10px', border:'0.5px solid',margin:'10px', padding:'10px', width:'20vw'}} value={publisher}
                     onChange={(e) => setPublisher(e.target.value)}
                     type="text" placeholder="Publish" /><br />
-                <input value={status}
+                <input  style={{borderRadius:'10px', border:'0.5px solid',margin:'10px', padding:'10px', width:'20vw'}} value={status}
                     onChange={(e) => setStatus(e.target.value)}
                     type="text" placeholder="Status" /><br />
 
