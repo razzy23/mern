@@ -35,14 +35,14 @@ function App() {
           }}>
             <h1>Login</h1>
             <form onSubmit={loginUser}>
-                <input value={email}
+                <input style={{margin:'10px', padding:'10px', width:'20vw'}} value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     type="email" placeholder="Email" /><br />
-                <input value={password}
+                <input style={{margin:'10px', padding:'10px', width:'20vw'}} value={password}
                     onChange={(e) => setPassword(e.target.value)}
                     type="password" placeholder="Password" />
                 <br />
-                <input type="submit" value="Login" />
+                <input style={{margin:'10px',padding:'10px'}} type="submit" value="Login" />
             </form>
         </div>
     );

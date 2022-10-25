@@ -3,6 +3,7 @@ import { BrowserRouter, Link, Routes } from 'react-router-dom'
 const liStyle ={
     display: 'inline-block',
     padding: '10px',
+    textDecoration: 'none',
 }
 
 function Nav() {
@@ -11,8 +12,9 @@ function Nav() {
             <ul style={{
                 listStyleType: 'none',
                 display: 'flex',
-                justifyContent: 'center',
+                justifyContent: 'start',
                 flexDirection: 'row',
+                
             }}>
                 <li style={liStyle}>
                     <a href="/">Home</a>
@@ -22,7 +24,10 @@ function Nav() {
                     <a href="/login">Login</a>
                 </li>
                 <li style={liStyle}>
-                    <a href="/register">Register</a>
+                    <a href="/bookView">Books View</a>
+                </li>
+                <li style={liStyle}>
+                    <a href="/booksInsert">Insert</a>
                 </li>
             </ul>
         </nav>
