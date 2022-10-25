@@ -36,22 +36,22 @@ function App() {
             height: '50vh', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column'
         }}>
             <h1 onClick={booksview}>Books</h1><br/>
-            <table id='xtable' >
+            <table id='xtable' style={{width:"800px",textAlign:'center'}} >
                 <tr><th>Book title</th><th>Author</th><th>Genre</th><th>status</th></tr>
                 <tr>
-                    <td>how to write commit messages</td>
+                    <td style={{textAlign:'left'}}>how to write commit messages</td>
                     <td>nisura</td>
                     <td >sci-fi</td>
                     <td>available</td>
                 </tr>
                 <tr>
-                    <td>how to eat water</td>
+                    <td style={{textAlign:'left'}}>how to eat water</td>
                     <td>ravindu</td>
                     <td >sci-fi</td>
                     <td>available</td>
                 </tr>
                 <tr>
-                    <td>how to row</td>
+                    <td style={{textAlign:'left'}}>how to row</td>
                     <td>sahan</td>
                     <td >fiction</td>
                     <td>available</td>
