@@ -6,8 +6,11 @@ const liStyle = {
     padding: '10px',
     textDecoration: 'none',
 }
-function Logout(){
-    localStorage.removeItem('Token')
+function Logout() {
+    alert("Logged out")
+    localStorage.clear()
+    window.location.href = '/'
+
 }
 
 
@@ -19,11 +22,6 @@ function Nav() {
             const user = jwt(token)
             console.log(user)
             setToken1(user)
-            // alert("HEY " + user.name)
-        }
-        else {
-            alert("Please Login")
-
         }
     }, [])
     return (
@@ -42,9 +40,8 @@ function Nav() {
                 <li style={liStyle}>
                     <a href="/">Home</a>
                 </li>
-
-                {!token1 &&<ul><li style={liStyle}>
-                 <a href="/login">Login</a> </li></ul>}
+                {!token1 && <ul><li style={liStyle}>
+                    <a href="/login">Login</a> </li></ul>}
                 <li style={liStyle}>
                     <a href="/register">Register</a>
                 </li>
@@ -55,14 +52,15 @@ function Nav() {
                     <a href="/booksInsert">Insert</a>
                 </li>
             </ul>
-            
-            
-                
-                {token1 &&<ul><li style={liStyle}>
-                <img src='user.png' style={{width:'50px',height:'50px',borderRadius:'50%'}}/>
-                 <a href="/dash">Hey {token1.name}</a> </li></ul>}
-           
-            
+
+
+
+            {token1 && <ul><li style={liStyle}>
+                <img src='images/user.png' style={{ width: '50px', height: '50px', borderRadius: '50%' }} />
+                <a href="/dash">Hey {token1.name}</a>
+                <button onClick={Logout}>Logout</button> </li></ul>}
+
+
         </nav>
     )
 }
