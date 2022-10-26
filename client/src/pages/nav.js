@@ -6,6 +6,15 @@ const liStyle = {
     padding: '10px',
     textDecoration: 'none',
 }
+
+const navbutton ={
+    textDecoration:'none', 
+    backgroundColor:'#FAFAFA', 
+    border:'1px solid black', 
+    borderRadius:'12px', 
+    padding:'10px 50px 10px 50px'
+}
+
 const liStyle2 = {
     backgroundColor:'white',
     borderRadius:'40px',
@@ -50,11 +59,11 @@ function Nav() {
             }}>
                 {token1 &&<ul> 
                     <li style={liStyle}>
-                        <a href="/bookView" style={{color:'white !important'}}>Books View</a>
+                        <a href="/bookView" style={navbutton}>Books View</a>
                     </li>
                     {token1.userType==='admin' &&
                     <li style={liStyle}>
-                        <a href="/booksInsert">Insert</a>
+                        <a href="/booksInsert" style={navbutton}>Insert</a>
                     </li>}
                 </ul>}
             </ul>
