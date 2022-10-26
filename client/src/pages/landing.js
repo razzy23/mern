@@ -2,40 +2,48 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 const divstyle = {
+    boxShadow: '0px 10px 25px 0px rgba(0,0,0,0.1)', 
     display: 'flex',
     justifyContent: 'center',
     alignContent: 'center',
     color: 'white !important',
-    width: '100%',
+    width: '150px',
     borderRadius: '10px',
-    margin: '0 auto 0 50px',
+    margin: '0px 0 0 10px',
     padding: '30px',
     textDecoration: 'none',
     backgroundColor: '#abcdef',
-    alignItems:'center'
+    alignItems: 'center'
 }
- const div1 ={
+const div1 = {
     display: 'flex',
     alignContent: 'center',
     width: '60%',
-    margin:'40px auto auto auto',
- }
+    margin: '40px auto auto auto',
+}
 
 function App() {
-  
 
-    return ( 
+
+    return (
         <div style={{
-             height: '50vh', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column'
-          }}>
+            height: '50vh', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column'
+        }}>
             <h2>Welcome to your local library</h2>
             <h3>Please Sign in to continue</h3>
-            <div style={div1}>
-                <a href = "/register" style={divstyle}>
-                New User</a>
-                <a href = "/login" style={divstyle}>
-                Existing User</a>
-                <a href = "/login" style={divstyle}>Admin</a>
+            <div style={{display:'flex', width:'50vw'}}>
+                <div style={divstyle}>
+                    <a href="/register" >
+                        New User</a>
+
+                </div>
+                <div style={divstyle }>
+                    <a href="/login" >
+                        Existing User</a>
+                </div>
+                <div style={divstyle}>
+                    <a href="/login" >Admin</a>
+                </div>
             </div>
         </div>
     );
