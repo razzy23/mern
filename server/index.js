@@ -28,7 +28,7 @@ app.post('/api/register', async (req, res) => {
   console.log(req.body)
   try {
     const user = await User.create({
-      name: req.body.name,
+      username: req.body.name,
       email: req.body.email,
       password: req.body.password,
     })
@@ -43,11 +43,13 @@ app.post('/api/login', async (req, res) => {
     const user = await User.findOne({
       email: req.body.email,
       password: req.body.password
+      
     })
-
+    
     if (user) {
+     // console.log(user[name])
       const token = jwt.sign({
-        name: user.name,
+        name: user.username,
         email: user.email,
       }, 'mysecret')
 

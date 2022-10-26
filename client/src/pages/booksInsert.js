@@ -33,7 +33,7 @@ function App() {
     }
 
     return (
-        <div style={{
+        <div style={{   
             paddingTop:'60px',height: '50vh', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column'
         }}>
             <h1>Books Insert</h1>

@@ -1,5 +1,5 @@
 import { useState } from 'react'
-
+import jwtDecode from 'jwt-decode'
 
 function App() {
     const [email, setEmail] = useState('')
@@ -17,7 +17,6 @@ function App() {
             }),
         })
         const data = await response.json()
-        console.log(data)
         if(data.user){
             localStorage.setItem('token', data.user)
             alert("Login Successful")

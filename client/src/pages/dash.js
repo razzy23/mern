@@ -30,24 +30,33 @@ const Dashbord = () => {
 
         const token = localStorage.getItem('token')
         console.log("hwllo")
-
+        console.log(token)
         if (token) {
             const user = jwt(token)
             console.log(user)
-            if (!user) {
-                localStorage.removeItem('token')
-                history('/login')
-                alert("Logged out")
-            } else {
-                populateQuote()
-                alert("Logged in")
-                history('/dash')
-                document.getElementById('log').style.display = 'none'
-                document.getElementById('reg').style.display = 'none'
-                document.getElementById('home').innerHTML = 'Log out'
-            }
+            alert("HEY "+ user.username)
+        }
+        else{
+            alert("Please Login")
 
         }
+        // if (token) {
+        //     const user = jwt(token)
+        //     console.log(user)
+        //     if (!user) {
+        //         localStorage.removeItem('token')
+        //         history('/login')
+        //         alert("Logged out")
+        //     } else {
+        //         populateQuote()
+        //         alert("Logged in")
+        //         history('/dash')
+        //         document.getElementById('log').style.display = 'none'
+        //         document.getElementById('reg').style.display = 'none'
+        //         document.getElementById('home').innerHTML = 'Log out'
+        //     }
+
+        // }
     }, [])
 
     async function updateQuote(event) {
