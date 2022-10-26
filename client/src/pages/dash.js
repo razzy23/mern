@@ -31,12 +31,10 @@ const Dashbord = () => {
         const token = localStorage.getItem('token')
         if (token) {
             const user = jwt(token)
-            console.log(user)
-            alert("HEY "+ user.name)
+
         }
         else{
             alert("Please Login")
-
         }
         // if (token) {
         //     const user = jwt(token)
@@ -70,7 +68,6 @@ const Dashbord = () => {
             })
         })
         const data =await req.json()
-        console.log(data)
         if (data.status === 'ok') {
             setTempQuote('')
             setQuote(data.quote)

@@ -19,8 +19,10 @@ function App() {
         const data = await response.json()
         if(data.user){
             localStorage.setItem('token', data.user)
+            console.log(data)
+
             alert("Login Successful")
-            window.location.href = "/dash"
+            window.location.href = "/bookview"
         }else{
             alert("Login Failed")
         }

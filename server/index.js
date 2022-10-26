@@ -31,6 +31,7 @@ app.post('/api/register', async (req, res) => {
       username: req.body.name,
       email: req.body.email,
       password: req.body.password,
+      userType:"user"
     })
     res.json({ status: 'ok' })
   } catch (err) {
@@ -52,6 +53,7 @@ app.post('/api/login', async (req, res) => {
       const token = jwt.sign({
         name: user.username,
         email: user.email,
+        userType: user.userType
       }, 'mysecret')
 
       res.json({ status: 'ok', user: token })

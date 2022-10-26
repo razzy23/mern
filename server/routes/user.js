@@ -7,17 +7,18 @@ router.route('/').get((req, res) => {
         .catch(err => res.status(400).json('Error: ' + err));
 }); //finds all users in the database or returns an error
 
-router.route('/add').post((req, res) => {
-    const username = req.body.username;
-    const email = req.body.email;
-    const password = req.body.password;
+// router.route('/add').post((req, res) => {
+//     const username = req.body.name;
+//     const email = req.body.email;
+//     const password = req.body.password;
+//     const userType = "user";
 
-    const newUser = User ({username, email, password});
+//     const newUser = User ({username, email, password, userType});
 
-    newUser.save()
-        .then(() => res.json('User added!'))
-        .catch(err => res.status(400).json('Error: ' + err));
-}); //adds a new user to the database or returns an error
+//     newUser.save()
+//         .then(() => res.json('User added!'))
+//         .catch(err => res.status(400).json('Error: ' + err));
+// }); //adds a new user to the database or returns an error
 
 router.route('/:id/').get((req, res) => {
     User.findById(req.params.id)

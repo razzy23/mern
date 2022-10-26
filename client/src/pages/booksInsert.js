@@ -28,33 +28,37 @@ function App() {
         if (data.user) {
             localStorage.setItem('token', data.user)
             alert("Login Successful")
-        } 
+        }
     }
 
     return (
-        <div style={{   
-            paddingTop:'60px',height: '50vh', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column'
+        <div style={{
+            paddingTop: '60px', height: '50vh', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column'
         }}>
             <h1>Books Insert</h1>
-            <form onSubmit={bookinsert}>
-            <label>ISBN</label>
-                <input  style={{borderRadius:'10px', border:'0.5px solid',margin:'10px', padding:'10px', width:'20vw'}} value={ISBN}
+            <form onSubmit={bookinsert} style={{textAlign:'center'}}>
+                <label>ISBN</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input style={{ borderRadius: '10px', border: '0.5px solid', margin: '10px', padding: '10px', width: '20vw' }} value={ISBN}
                     onChange={(e) => setISBN(e.target.value)}
                     type="text" maxLength="10" placeholder="ISBN" /><br />
-                <input  style={{borderRadius:'10px', border:'0.5px solid',margin:'10px', padding:'10px', width:'20vw'}} value={title}
+                <label>Title</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input style={{ borderRadius: '10px', border: '0.5px solid', margin: '10px', padding: '10px', width: '20vw' }} value={title}
                     onChange={(e) => setTitle(e.target.value)}
                     type="text" placeholder="Title" /><br />
-                <input  style={{borderRadius:'10px', border:'0.5px solid',margin:'10px', padding:'10px', width:'20vw'}} value={author}
+                <label>Author</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                <input style={{ borderRadius: '10px', border: '0.5px solid', margin: '10px', padding: '10px', width: '20vw' }} value={author}
                     onChange={(e) => setAuthor(e.target.value)}
                     type="text" placeholder="Author" /><br />
-                <input  style={{borderRadius:'10px', border:'0.5px solid',margin:'10px', padding:'10px', width:'20vw'}} value={publisher}
+                <label>Publisher</label>
+                <input style={{ borderRadius: '10px', border: '0.5px solid', margin: '10px', padding: '10px', width: '20vw' }} value={publisher}
                     onChange={(e) => setPublisher(e.target.value)}
                     type="text" placeholder="Publish" /><br />
-                <input  style={{borderRadius:'10px', border:'0.5px solid',margin:'10px', padding:'10px', width:'20vw'}} value={status}
+                <label>Status</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                <input style={{ borderRadius: '10px', border: '0.5px solid', margin: '10px', padding: '10px', width: '20vw' }} value={status}
                     onChange={(e) => setStatus(e.target.value)}
                     type="text" placeholder="Status" /><br />
 
-                <input style={{margin:'10px',padding:'10px'}} type="submit" value="Submit" />
+                <input style={{ margin: '10px', padding: '10px',borderRadius:'20px', border:'1px solid',textAlign:'center',fontWeight:'bold',fontSize:'15px', width:'90px', cursor:'pointer' }} type="submit" value="SUBMIT" />
             </form>
         </div>
     );

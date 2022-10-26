@@ -52,7 +52,7 @@ function Nav() {
                     <li style={liStyle}>
                         <a href="/bookView" style={{color:'white !important'}}>Books View</a>
                     </li>
-                    {token1.name=='admin' &&
+                    {token1.userType==='admin' &&
                     <li style={liStyle}>
                         <a href="/booksInsert">Insert</a>
                     </li>}
