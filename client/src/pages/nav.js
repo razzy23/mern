@@ -6,6 +6,18 @@ const liStyle = {
     padding: '10px',
     textDecoration: 'none',
 }
+const liStyle2 = {
+    backgroundColor:'white',
+    borderRadius:'10px',
+    boxShadow:'0px 10px 10px 0px rgba(0,0,0,0.75)',
+    display: 'flex',
+    width: '230px',
+    padding: '10px',
+    textDecoration: 'none',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',   
+}
 function Logout() {
     alert("Logged out")
     localStorage.clear()
@@ -55,7 +67,7 @@ function Nav() {
 
 
 
-            {token1 && <ul><li style={liStyle}>
+            {token1 && <ul><li style={liStyle2}>
                 <img src='images/user.png' style={{ width: '50px', height: '50px', borderRadius: '50%' }} />
                 <a href="/dash">Hey {token1.name}</a>
                 <button onClick={Logout}>Logout</button> </li></ul>}
