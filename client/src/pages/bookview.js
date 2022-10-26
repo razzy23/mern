@@ -42,29 +42,18 @@ function App() {
     //         alert("Login Successful")
     //     }
 
-    //     for(var i=0;i<books.length;i++){
-    //         document.getElementById('r').innerHTML = "<td id='title'></td><td id='author'></td><td id='genre'></td><td id='status'></td>"
-    //     }
-    //     for (var i = 0; i < books.length; i++) {
-    //         document.getElementById('title').innerHTML = books[i].title;
-    //         document.getElementById('author').innerHTML = books[i].author;
-    //         document.getElementById('genre').innerHTML = books[i].genre;
-    //         document.getElementById('status').innerHTML = books[i].status;
-    //     }
-
-    // }
-
     return (
         <div style={{
             height: '50vh', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column'
         }}>
-            <table>
-                <tbody style={{ display: 'block', border: '1px solid black' }}>
-                    <tr style={{border:'1px solid black'}}>
-                        <th>ISBN</th>
-                        <th>Title</th>
-                        <th>Author</th>
-                        <th>Publisher</th>
+            <table style={{width:'90%'}}>
+                <tbody style={{border: '1px solid black' }}>
+                    <tr style={{border:'0.5px solid black', textAlign:'left'}}>
+                        <th style={{width:'25%'}}>ISBN</th>
+                        <th style={{width:'25%'}}>Title</th>
+                        <th style={{width:'25%'}}>Author</th>
+                        <th style={{width:'15%'}}>Status</th>
+                        <th style={{width:'10%', }}>Delete</th>
                     </tr>
 
                     {data.books.map((book, index) => (
@@ -72,7 +61,7 @@ function App() {
                             <td>{book._id}</td>
                             <td>{book.title}</td>
                             <td>{book.author}</td>
-                            <td>{book.publisher}</td>
+                            <td>{book.status}</td>
                             <td><button onClick={()=>Delete(book._id)}>Delete</button></td>
                         </tr>
                     ))}

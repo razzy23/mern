@@ -2,7 +2,6 @@ import { useState } from 'react'
 
 
 function App() {
-    const [bookname, setbookname] = useState('')
     const [ISBN, setISBN] = useState('')
     const [title, setTitle] = useState('');
     const [author, setAuthor] = useState('');
@@ -38,12 +37,9 @@ function App() {
         }}>
             <h1>Books Insert</h1>
             <form onSubmit={bookinsert}>
-                <input style={{borderRadius:'10px', border:'0.5px solid', margin:'10px', padding:'10px', width:'20vw'}} value={bookname}
-                    onChange={(e) => setbookname(e.target.value)}
-                    type="text" placeholder="Book Name" /><br />
                 <input  style={{borderRadius:'10px', border:'0.5px solid',margin:'10px', padding:'10px', width:'20vw'}} value={ISBN}
                     onChange={(e) => setISBN(e.target.value)}
-                    type="text" placeholder="ISBN" /><br />
+                    type="text" maxLength="10" placeholder="ISBN" /><br />
                 <input  style={{borderRadius:'10px', border:'0.5px solid',margin:'10px', padding:'10px', width:'20vw'}} value={title}
                     onChange={(e) => setTitle(e.target.value)}
                     type="text" placeholder="Title" /><br />

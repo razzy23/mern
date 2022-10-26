@@ -18,7 +18,8 @@ router.route('/add').post((req, res) => {
         ISBN,
         title,
         author,
-        publisher
+        publisher,
+        status
     });
 
     newBooks.save()
