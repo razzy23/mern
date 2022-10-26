@@ -22,7 +22,6 @@ function Logout() {
     alert("Logged out")
     localStorage.clear()
     window.location.href = '/'
-
 }
 
 
@@ -49,20 +48,15 @@ function Nav() {
                 flexDirection: 'row',
 
             }}>
-                <li style={liStyle}>
-                    <a href="/">Home</a>
-                </li>
-                {!token1 && <ul><li style={liStyle}>
-                    <a href="/login">Login</a> </li></ul>}
-                <li style={liStyle}>
-                    <a href="/register">Register</a>
-                </li>
-                <li style={liStyle}>
-                    <a href="/bookView">Books View</a>
-                </li>
-                <li style={liStyle}>
-                    <a href="/booksInsert">Insert</a>
-                </li>
+                <ul> {token1 &&
+                    <li style={liStyle}>
+                        <a href="/bookView">Books View</a>
+                    </li>}
+                    {token1.name=='admin' &&
+                    <li style={liStyle}>
+                        <a href="/booksInsert">Insert</a>
+                    </li>}
+                </ul>
             </ul>
 
 

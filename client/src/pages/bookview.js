@@ -1,8 +1,12 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios';
 import {useNavigate} from 'react-router-dom'
+import jwt from 'jwt-decode'
+
+
 
 function App() {
+    
     const [data, setData] = useState({ books: [] })
 
     useEffect(() => {
@@ -41,6 +45,16 @@ function App() {
     //         localStorage.setItem('token', data.user)
     //         alert("Login Successful")
     //     }
+    
+    const [token1, setToken1] = useState('')
+    useEffect(() => {
+        const token = localStorage.getItem('token')
+        if (token) {
+            const user = jwt(token)
+            console.log(user)
+            setToken1(user)
+        }
+    }, [])
 
     return (
         <div style={{
@@ -53,7 +67,7 @@ function App() {
                         <th style={{width:'25%'}}>Title</th>
                         <th style={{width:'25%'}}>Author</th>
                         <th style={{width:'15%'}}>Status</th>
-                        <th style={{width:'10%', }}>Delete</th>
+                        {token1.name=='admin' && <th style={{width:'10%', }}>Delete</th> }
                     </tr>
 
                     {data.books.map((book, index) => (
@@ -62,7 +76,7 @@ function App() {
                             <td>{book.title}</td>
                             <td>{book.author}</td>
                             <td>{book.status}</td>
-                            <td><button onClick={()=>Delete(book._id)}>Delete</button></td>
+                            {token1.name=='admin' && <td><button onClick={()=>Delete(book._id)}>Delete</button></td>}
                         </tr>
                     ))}
                 </tbody>
@@ -71,7 +85,5 @@ function App() {
         </div>
     )
 }
-
-
 
 export default App; 
