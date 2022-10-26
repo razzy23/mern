@@ -6,9 +6,11 @@ const liStyle = {
     padding: '10px',
     textDecoration: 'none',
 }
-function Uname(){
-
+function Logout(){
+    localStorage.removeItem('Token')
 }
+
+
 function Nav() {
     const [token1, setToken1] = useState('')
     useEffect(() => {
@@ -41,9 +43,8 @@ function Nav() {
                     <a href="/">Home</a>
                 </li>
 
-                <li style={liStyle}>
-                    <a href="/login">Login</a>
-                </li>
+                {!token1 &&<ul><li style={liStyle}>
+                 <a href="/login">Login</a> </li></ul>}
                 <li style={liStyle}>
                     <a href="/register">Register</a>
                 </li>
