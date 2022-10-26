@@ -29,12 +29,10 @@ const Dashbord = () => {
     useEffect(() => {
 
         const token = localStorage.getItem('token')
-        console.log("hwllo")
-        console.log(token)
         if (token) {
             const user = jwt(token)
             console.log(user)
-            alert("HEY "+ user.username)
+            alert("HEY "+ user.name)
         }
         else{
             alert("Please Login")

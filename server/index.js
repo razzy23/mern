@@ -48,6 +48,7 @@ app.post('/api/login', async (req, res) => {
     
     if (user) {
      // console.log(user[name])
+     console.log(user)
       const token = jwt.sign({
         name: user.username,
         email: user.email,
