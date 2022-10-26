@@ -37,7 +37,7 @@ function Nav() {
     }, [])
     return (
         <nav style={{
-            display: 'flex', justifyContent: 'space-around', alignContent: 'center', color: 'white !important', width: '100vw', borderRadius: '10px', margin: 'auto'
+            display: 'flex', justifyContent: 'space-around', alignContent: 'center', color: 'white !important', width: '99vw', borderRadius: '10px', margin: 'auto'
         }}>
             <ul style={{
                 padding: 0,
@@ -48,15 +48,15 @@ function Nav() {
                 flexDirection: 'row',
 
             }}>
-                <ul> {token1 &&
+                {token1 &&<ul> 
                     <li style={liStyle}>
-                        <a href="/bookView">Books View</a>
-                    </li>}
+                        <a href="/bookView" style={{color:'white !important'}}>Books View</a>
+                    </li>
                     {token1.name=='admin' &&
                     <li style={liStyle}>
                         <a href="/booksInsert">Insert</a>
                     </li>}
-                </ul>
+                </ul>}
             </ul>
 
 
