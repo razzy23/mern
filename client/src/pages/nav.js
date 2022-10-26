@@ -41,16 +41,17 @@ function Nav() {
                     <a href="/">Home</a>
                 </li>
                 {!token1 && <ul><li style={liStyle}>
-                    <a href="/login">Login</a> </li></ul>}
+                    <a href="/login">Login</a> </li>
                 <li style={liStyle}>
                     <a href="/register">Register</a>
-                </li>
+                </li></ul>}
+                {token1 && <ul>
                 <li style={liStyle}>
                     <a href="/bookView">Books View</a>
                 </li>
                 <li style={liStyle}>
                     <a href="/booksInsert">Insert</a>
-                </li>
+                </li></ul>}
             </ul>
 
 
