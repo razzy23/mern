@@ -33,16 +33,16 @@ function App() {
             <h3>Please Sign in to continue</h3>
             <div style={{display:'flex', width:'50vw'}}>
                 <div style={divstyle}>
-                    <a style={{fontWeight:'bold', fontSize:'20px',textDecoration:'none', color:'#ff4d00'}} href="/register" >
+                    <a style={{fontWeight:'bold',textAlign:'center', fontSize:'20px',textDecoration:'none', color:'#ff4d00'}} href="/register" >
                         New User</a>
 
                 </div>
                 <div style={divstyle }>
-                    <a style={{fontWeight:'bold', fontSize:'20px',textDecoration:'none', color:'#ff4d00'}} href="/login" >
+                    <a style={{fontWeight:'bold',textAlign:'center', fontSize:'20px',textDecoration:'none', color:'#ff4d00'}} href="/login" >
                         Existing User</a>
                 </div>
                 <div style={divstyle}>
-                    <a style={{fontWeight:'bold', fontSize:'20px',textDecoration:'none', color:'#ff4d00'}} href="/login" >Admin</a>
+                    <a style={{fontWeight:'bold', textAlign:'center' ,fontSize:'20px',textDecoration:'none', color:'#ff4d00'}} href="/login" >Admin</a>
                 </div>
             </div>
         </div>

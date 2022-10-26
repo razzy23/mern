@@ -37,6 +37,7 @@ function App() {
         }}>
             <h1>Books Insert</h1>
             <form onSubmit={bookinsert}>
+            <label>ISBN</label>
                 <input  style={{borderRadius:'10px', border:'0.5px solid',margin:'10px', padding:'10px', width:'20vw'}} value={ISBN}
                     onChange={(e) => setISBN(e.target.value)}
                     type="text" maxLength="10" placeholder="ISBN" /><br />
