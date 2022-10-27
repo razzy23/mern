@@ -6,8 +6,11 @@ import jwt from 'jwt-decode'
 
 
 function App() {
-
+    const [data1, setData1] = useState([]);
+    const [user, setUser] = useState("User");
     const [data, setData] = useState({ books: [] })
+    const [token1, setToken1] = useState('')
+
 
     useEffect(() => {
         async function fetchData() {
@@ -20,20 +23,43 @@ function App() {
         fetchData()
     }, []);
 
-    async function update(book,status) {
-                    console.log(status)
-                    book.status = status
+
+
+    async function update(book, status) {
+        console.log(status)
+        book.status = status
         console.log(book)
-        const response = await fetch('http://localhost:1337/books/update/' + book._id, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(book),
-        })
-        const data = await response.json()
-        console.log(data)
-        window.location.reload()
+        console.log(token1)
+        const iss = {
+            title: book.title,
+            username: token1.name,
+            dateissued: "2021-05-01",
+            duedate: "2022/10/12",
+            status: "issued"
+        }
+        const res = await axios.post('http://localhost:1337/issues/add', iss)
+            .then(response => alert(response.data));
+
+        console.log(data1)
+        //     const response = await fetch('http://localhost:1337/issues/add/', {
+        //         method: 'POST',
+        //         headers: {
+        //             'Content-Type': 'application/json'
+        //         },
+        //         body: JSON.stringify({
+        //             title,
+        //             username,
+        //             dateissued,
+        //             dateborrowed,
+        //             status,
+
+        //         }),
+
+        //     })
+        //     const temp = await response.json()
+        //     console.log(temp)
+        //     setData1(temp)
+        //     // window.location.reload()
     }
 
     function Delete(id) {
@@ -45,7 +71,6 @@ function App() {
         window.location.replace('/bookView');
 
     }
-    console.log(data)
 
     // async function booksview(event) {
     //     event.preventDefault()
@@ -62,7 +87,6 @@ function App() {
     //         alert("Login Successful")
     //     }
 
-    const [token1, setToken1] = useState('')
     useEffect(() => {
         const token = localStorage.getItem('token')
         if (token) {
@@ -92,7 +116,8 @@ function App() {
                             <td>{book.title}</td>
                             <td>{book.author}</td>
                             <td>{book.status}</td>
-                            {token1.userType == 'admin' && <td><button onClick={() => update(book,"Issued")}>Available</button><button onClick={() => update(book,"Available")}>Issue</button></td>}
+                            {token1.userType == 'admin' && <td>
+                                <button onClick={() => update(book, "Issued")}>Available</button><button onClick={() => update(book, "Available")}>Issue</button></td>}
                             {token1.userType == 'admin' && <td><button onClick={() => Delete(book._id)}>Delete</button></td>}
                         </tr>
                     ))}

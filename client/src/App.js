@@ -9,6 +9,7 @@ import Nav from './pages/nav'
 import Dash from './pages/dash'
 import BooksInsert from './pages/booksInsert'
 import BooksView from './pages/bookview'
+import IssueView from './pages/issueview'
 
 const App = () => {
     return <div>
@@ -22,6 +23,7 @@ const App = () => {
                 <Route path="/dash" element=<Dash /> />
                 <Route path="/booksInsert" element=<BooksInsert /> />
                 <Route path="/bookview" element=<BooksView /> />
+                <Route path="/issueview" element=<IssueView /> />
             </Routes>
         </BrowserRouter>
     </div>
