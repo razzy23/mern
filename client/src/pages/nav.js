@@ -65,6 +65,10 @@ function Nav() {
                     <li style={liStyle}>
                         <a href="/booksInsert" style={navbutton}>Insert</a>
                     </li>}
+                    {token1.userType==='admin' &&
+                    <li style={liStyle}>
+                        <a href="/issueView" style={navbutton}>Issue</a>
+                    </li>}
                 </ul>}
             </ul>
 
