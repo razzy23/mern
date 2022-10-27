@@ -112,7 +112,7 @@ function App() {
 
                     {data.books.map((book, index) => (
                         <tr key={index}>
-                            <td>{book._id}</td>
+                            <td>{book.ISBN}</td>
                             <td>{book.title}</td>
                             <td>{book.author}</td>
                             <td>{book.status}</td>
