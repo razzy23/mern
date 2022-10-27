@@ -6,7 +6,7 @@ const issuesSchema = new Schema({
     username: { type: String, required: true },
     dateissued: { type: Date, required: true },
     duedate: { type: Date, required: true },
-    status: { type: Boolean, required: true }
+    status: { type:String, required: true }
 });
 
 const Issues = mongoose.model('Issues', issuesSchema);
